@@ -1,0 +1,13 @@
+h1 Todos
+form(action='/todos' method="GET")
+  input(type='text' name='q' value = q)
+  input(type='submit' value='Search')
+  
+form(action='/todos/create' method="POST")
+  input(type="tex" name="name")
+  button Create
+  
+ul
+  each todo in todos
+    li= todo.id + ': ' + todo.name
+a(href='/todos') click vào đây
